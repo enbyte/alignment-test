@@ -101,7 +101,15 @@
         function doAnswers() {
             let resp = prompt("Did you answer every single question truthfully with the correct answer? (yes/no)");
             if (resp == "yes") {
-                alert("Your result is one of the following. You can pick which depending on what you answered and how you feel:\n{Lawful|Neutral|Chaotic} {Good|Neutral|Evil}");
+                alert("There was an error fetching your destiny. Please report the following error to the developers:")
+                alert(
+`FutureIsNonDeterministicError on line 43:
+Traceback inside function accurately_simulate_universe() (oldest call last):
+    File "main", line 43 in accurately_simulate_universe
+        figure_out_electron_positions()
+    File "electron_positions", line 206 in get_electron_pos()
+        travel_back_in_time_and_kill_heisenberg_to_prevent_uncertainty_principle()
+Function had an error: 'Time travel is not supported in this universe. Please upgrade to Universe Pro for $19.99/month to enable this feature.'`);
             } else if (resp == "no"){
                 alert("... :(");
                 alert("Tell the truth! Your result is: Lying chaotic evil scum.")
